@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>自定义选题</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/charisma-app.css" />
+		<link type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript"src="js/selectGroup.js"></script>
+		<script type="text/javascript" src="js/adminName.js"></script>
+		<style type="text/css">
+
+			.cart_table{
+				width:1200px;
+				border:1px #CCCCCC solid;
+			/*	text-align:center;*/
+				margin-top: 20px;
+			}
+			tr.cart_title{
+				background-color:#DFDFDF;
+			}
+			td{
+				padding:3px;
+			}
+			td.cart_total{
+				text-align:right;
+				padding:5px 15px 5px 0;
+			}
+			img.cart_thumb{
+				border:1px #b2b2b2 solid;
+				padding:2px;
+			}
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<!-- topbar starts -->
+		<div class="navbar navbar-default" role="navigation">
+
+			<div class="navbar-inner">
+				<button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">兆隆教育</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+				<div class="col-md-2 column">
+					<img src="img/logo.png" width="100px">
+				</div>
+
+				<!-- user dropdown starts -->
+				<div  class="col-md-10 column">
+					<div class="btn-group pull-right">
+						<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<i class="glyphicon glyphicon-user"></i><span id="names"></span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="updateAdmins.html">修改密码</a></li>
+							<li class="divider"></li>
+							<li><a href="Managerlogin.html">退出</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- topbar ends -->
+		<div class="ch-container">
+			<div class="row">
+
+				<!-- left menu starts -->
+				<div class="col-sm-2 col-lg-2">
+					<div class="sidebar-nav">
+						<div class="nav-canvas">
+
+
+							<ul class="nav nav-pills nav-stacked main-menu">
+								<li class="nav-header">菜单栏</li>
+								<li><a class="ajax-link" href="managersSys.html"><i class="glyphicon glyphicon-home"></i><span>&nbsp;&nbsp;首页</span></a>
+								</li>
+
+								<li><a class="ajax-link" href="StudentsInfo.html"><i class="glyphicon glyphicon-eye-open"></i><span> &nbsp;&nbsp;用户信息查询</span></a>
+								</li>
+								<li><a class="ajax-link" href="chart.html"><i class="glyphicon glyphicon-list-alt"></i><span> &nbsp;&nbsp;用户信息管理</span></a>
+								</li>
+								<li><a class="ajax-link" href="typography.html"><i class="glyphicon glyphicon-search"></i><span>&nbsp;&nbsp;试卷信息查询</span></a>
+								</li>
+								<li><a class="ajax-link" href="gallery.html"><i class="glyphicon glyphicon-edit "></i><span>&nbsp;&nbsp;试卷信息管理 </span></a>
+								</li>
+								<li><a class="ajax-link" href="table.html"><i
+										class="glyphicon glyphicon-align-justify"></i><span>&nbsp;&nbsp;满意度试题管理</span></a></li>
+
+								<li class="accordion">
+									<a href="#"><i class="glyphicon glyphicon-folder-open"></i><span>&nbsp;&nbsp;教员选题</span></a>
+									<ul class="nav nav-pills nav-stacked">
+										<li><a href="selectGroup.html">自定义选题</a></li>
+										<li><a href="#">随机选题</a></li>
+									</ul>
+								</li>
+
+
+								<li><a class="ajax-link" href="updateAdmins.html"><i class="glyphicon glyphicon-th">
+								</i><span> 密码修改</span></a></li>
+								<li><a href="Managerlogin.html"><i class="glyphicon glyphicon-share "></i><span> 退出</span></a></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--/span-->
+				<!-- left menu ends -->
+
+				<div id="content" class="col-lg-10 col-sm-10">
+					<!-- content starts -->
+					<div>
+						<ul class="breadcrumb">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="managersSys.html">主菜单</a>
+							</li>
+								<li>
+								<a href="#">自定义选题</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="left_content">
+            <div class="title" ><span class="title_icon"><img src="img/papges1.png" alt="" title="" width="40px"/></span> &nbsp;&nbsp;&nbsp;选题列表</div>
+        
+        	<div class="feat_prod_box_details" style="margin-top: 30px">
+            
+            <table class="cart_table"  >
+				<tr class="cart_title" >
+					<td>编号</td>
+					<td style="text-align: center">题干</td>
+					<td>类型</td>
+					<td>出处</td>
+					<td>是否选择</td>
+
+				</tr>
+				<tr id="discounts"></tr>
+
+
+			</table>
+
+            </div>
+        </div><!--end of left content-->
+			<div id="t_s"></div>
+
+				</div>
+				</div><!--/.fluid-container-->
+			</div>
+
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script src="js/jquery.cookie.js"></script>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.history.js"></script>
+		<!-- application script for Charisma demo -->
+		<script src="js/charisma.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Bootstrap 101 Template</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				background: #E6EAEB;
+				font-family: Arial, '微软雅黑', '宋体';
+				font-size: 25px;
+			}
+			
+			.alert-box {
+				display: none;
+				position: relative;
+				margin: 30px auto 0;
+				padding: 100px 85px 22px;
+				border-radius: 10px 10px 0 0;
+				background: #FFF;
+				box-shadow: 5px 9px 17px rgba(102, 102, 102, 0.75);
+				width: 286px;
+				color: #FFF;
+				text-align: center
+			}
+			
+			.alert-box p {
+				margin: 0
+			}
+			
+			.alert-circle {
+				position: absolute;
+				top: -70px;
+				left: 30px
+			}
+			
+			.alert-sec-circle {
+				stroke-dashoffset: 0;
+				stroke-dasharray: 735;
+				transition: stroke-dashoffset 1s linear
+			}
+			
+			.alert-sec-text {
+				position: absolute;
+				top: 25px;
+				left: 110px;
+				width: 76px;
+				color: #000;
+				font-size: 25px
+			}
+			
+			.alert-sec-unit {
+				font-size: 25px
+			}
+			
+			.alert-body {
+				margin: 35px 0
+			}
+			
+			.alert-head {
+				color: #242424;
+				font-size: 23px
+			}
+			
+			.alert-concent {
+				margin: 25px 0 14px;
+				color: #7B7B7B;
+				font-size: 18px
+			}
+			
+			.alert-concent p {
+				line-height: 27px
+			}
+			
+			.alert-btn {
+				display: block;
+				border-radius: 10px;
+				background-color: #4AB0F7;
+				height: 55px;
+				line-height: 55px;
+				width: 286px;
+				color: #FFF;
+				font-size: 20px;
+				text-decoration: none;
+				letter-spacing: 2px
+			}
+			
+			.alert-btn:hover {
+				background-color: #6BC2FF
+			}
+			
+			.alert-footer {
+				margin: 0 auto;
+				height: 42px;
+				width: 120px
+			}
+			
+			.alert-footer-icon {
+				float: left
+			}
+			
+			.alert-footer-text {
+				float: left;
+				border-left: 2px solid #EEE;
+				padding: 3px 0 0 5px;
+				height: 40px;
+				color: #0B85CC;
+				font-size: 12px;
+				text-align: left
+			}
+			
+			.alert-footer-text p {
+				color: #7A7A7A;
+				font-size: 22px;
+				line-height: 18px
+			}
+			
+			input[type=radio] {
+				width: 20px;
+				height: 20px;
+			}
+		</style>
+
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<!--<script type="text/javascript" src="js/createExams.js"></script>-->
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column" style="text-align: center;">
+					<h3>
+			开始考试
+			</h3>
+					<hr />
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-3 column">
+					<div id="js-alert-box" class="alert-box">
+						<svg class="alert-circle" width="234" height="234">
+							<circle cx="117" cy="117" r="70" fill="#FFF" stroke="#43AEFA" stroke-width="17"></circle>
+							<circle id="js-sec-circle" class="alert-sec-circle" cx="117" cy="117" r="70" fill="transparent" stroke="#F4F1F1" stroke-width="18" transform="rotate(-90 117 117)"></circle>
+							<text class="alert-sec-unit" x="95" y="165" fill="#BDBDBD">secs</text>
+						</svg>
+						<div id="js-sec-text" class="alert-sec-text"></div>
+						<div class="alert-body">
+							<div id="js-alert-head" class="alert-head"></div>
+							<div class="alert-concent">
+								<p>注意考试时间，时间到,自动会交卷,祝您考个好成绩</p>
+
+							</div>
+							<a id="js-alert-btn" class="#" href="#"></a>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-9 column" style="padding-left: 200px;">
+					<form name="quiz1" style="font-size: 25px;" id="exam_form">
+						<div id="examing"></div>
+					
+
+
+						<hr>
+                        <input type="button" name="submit" value="提交" onClick=scorequiz(this.form) class="pt9">
+
+                    </form>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+        <script>
+            var testtype;
+			var list=0;
+            var one="0";
+            var two="0";
+            var three="0";
+            var four="0";
+            var five="0";
+            function scorequiz(form) {
+                if(form.Q1.value != null && form.Q1.value == "1") {
+                    one="1";
+                    list = list + 20
+                }
+                if(form.Q2.value != null && form.Q2.value == "1") {
+                    two="1";
+                    list = list + 20
+                }
+                if(form.Q3.value != null && form.Q3.value == "1") {
+                    three="1";
+                    list = list + 20
+                }
+                if(form.Q4.value != null && form.Q4.value == "1") {
+                    four="1";
+                    list = list + 20
+                }
+                if(form.Q5.value != null && form.Q5.value == "1") {
+                    five="1";
+                    list = list + 20
+                }
+
+                window.localStorage.setItem('scores',list);
+				result();
+            }
+            var f="";
+            var state ="";
+            function times(f){
+                var obj=document.getElementsByName(f);
+                for(var i=0;i<obj.length; i++){
+                    if(obj[i].checked){
+                        state=obj[i].value;
+                    }
+                }
+                return state;
+            }
+			function result(){
+                var id=window.localStorage.getItem('id');
+                var scores = {
+					"id":id,
+			   		"firstque":one,
+			  		"secondque":two,
+					"thirdque":three,
+			   		"fourthque":four,
+	  				 "fifthque":five,
+					"scoress":list,
+				};
+                $.ajax({
+                    type: "post",
+					data:scores,
+                    url: "http://localhost:8082/exams/headTeExamlRresult",
+                    async: true
+                });
+                if(testtype==3){
+                    window.location.href="showHeadTeResult.html";
+				}else {
+                    window.location.href="showtechnoTeResult.html";
+				}
+
+			}
+
+
+
+            $(document).ready(function() {
+                function getUrlParam(name){
+                    //构造一个含有目标参数的正则表达式对象
+                    var reg=new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    //匹配目标参数
+                    var r=window.location.search.substr(1).match(reg);
+                    //返回参数值
+                    if(r!=null) return unescape(r[2]);return null;
+                }
+                 testtype=getUrlParam('testtype');
+                $.ajax({
+                    type: "get",
+                    url: "http://localhost:8082/exams/"+testtype+"/headExaming",
+                    async: true,
+                    success: function(data) {
+                        if(data != "{}") {
+                            var js = JSON.parse(data);
+                            for(var i = 0; i < js.doexame.length; i++) {
+                                var n = i + 1;
+                                var m = "<div>" + n + ". " + js.doexame[i].test + "<br /><br />A:" + js.doexame[i].listop[0].fouroption + "<br /><br />B:" + js.doexame[i].listop[1].fouroption + "<br /><br />C:" + js.doexame[i].listop[2].fouroption +
+                                    "<br /><br />D:" + js.doexame[i].listop[3].fouroption + "<br /><br />" +
+                                    "<ol>A&nbsp;&nbsp;<input type='radio' name='Q" + n + "' value='" + js.doexame[i].listop[0].judge + "'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;" +
+                                    "<input type='radio' name='Q" + n + "' value='" + js.doexame[i].listop[1].judge + "'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;" +
+                                    "<input type='radio' name='Q" + n + "' value='" + js.doexame[i].listop[2].judge + "'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;" +
+                                    "<input type='radio' name='Q" + n + "' value='" + js.doexame[i].listop[3].judge + "'></ol></div>";
+                                $("#examing").before(m);
+                            }
+                        }
+                    }
+                });
+                alertSet('考试倒计时');
+
+                var f="";
+                var state ="";
+                function alertSet(e) {
+                    document.getElementById("js-alert-box").style.display = "block",
+                        document.getElementById("js-alert-head").innerHTML = e;
+                    var t = 30,
+                        n = document.getElementById("js-sec-circle");
+                    document.getElementById("js-sec-text").innerHTML = t,
+                        setInterval(function() {
+                                if(0 == t) {
+                                    var Q1=times("Q1");
+                                    var Q2=times("Q2");
+                                    var Q3=times("Q3");
+                                    var Q4=times("Q4");
+                                    var Q5=times("Q5");
+
+                                    if(Q1!= null && Q1 == "1") {
+                                        one="1";
+                                        list = list + 20
+                                    }
+                                    if(Q2!= null && Q2 == "1") {
+                                        two="1";
+                                        list = list + 20
+                                    }
+                                    if(Q3!= null && Q3== "1") {
+                                        three="1";
+                                        list = list + 20
+                                    }
+                                    if(Q4!= null && Q4 == "1") {
+                                        four="1";
+                                        list = list + 20
+                                    }
+                                    if(Q5!= null && Q5== "1") {
+                                        five="1";
+                                        list = list + 20
+                                    }
+                                    window.localStorage.setItem('scores',list);
+                                    result();
+
+                                } else {
+                                    t -= 1,
+                                        document.getElementById("js-sec-text").innerHTML = t;
+                                    var e = Math.round(t / 10 * 735);
+                                    n.style.strokeDashoffset = e - 735
+                                }
+                            },
+                            970);
+                }
+            })
+
+        </script>
+	</body>
+</html>

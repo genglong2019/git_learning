@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Bootstrap 101 Template</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/charisma-app.css" />
+		<link type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="js/AddPapers.js"></script>
+		<script type="text/javascript"src="js/adminName.js"></script>
+		<style type="text/css">
+
+			.form{background: rgba(255,255,255,0.2);width:500px;margin:25px auto;}
+			#login_form{display: block;}
+
+			.fa{display: inline-block;top: 27px;left: 6px;position: relative;color: #ccc;}
+			input[type="text"],input[type="password"]{padding-left:26px;}
+			.checkbox{padding-left:21px;}
+		</style>
+	</head>
+
+	<body>
+		<!-- topbar starts -->
+		<div class="navbar navbar-default" role="navigation">
+
+			<div class="navbar-inner">
+				<button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">兆隆教育</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+				<div class="col-md-2 column">
+					<img src="img/logo.png" width="100px">
+				</div>
+
+				<!-- user dropdown starts -->
+				<div  class="col-md-10 column">
+					<div class="btn-group pull-right">
+						<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<i class="glyphicon glyphicon-user"></i><span id="names"></span>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="updateAdmins.html">修改密码</a></li>
+							<li class="divider"></li>
+							<li><a href="Managerlogin.html">退出</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- topbar ends -->
+		<div class="ch-container">
+			<div class="row">
+
+				<!-- left menu starts -->
+				<div class="col-sm-3 col-lg-3">
+					<div class="sidebar-nav">
+						<div class="nav-canvas">
+
+							<ul class="nav nav-pills nav-stacked main-menu">
+								<li class="nav-header">菜单栏</li>
+								<li><a class="ajax-link" href="managersSys.html"><i class="glyphicon glyphicon-home"></i><span>&nbsp;&nbsp;首页</span></a>
+								</li>
+
+								<li><a class="ajax-link" href="StudentsInfo.html"><i class="glyphicon glyphicon-eye-open"></i><span> &nbsp;&nbsp;用户信息查询</span></a>
+								</li>
+								<li><a class="ajax-link" href="updateStudent.html"><i class="glyphicon glyphicon-list-alt"></i><span> &nbsp;&nbsp;用户信息管理</span></a>
+								</li>
+								<li><a class="ajax-link" href="papgersInfo.html"><i class="glyphicon glyphicon-search"></i><span>&nbsp;&nbsp;试卷信息查询</span></a>
+								</li>
+								<li><a class="ajax-link" href="updateTest.html"><i class="glyphicon glyphicon-edit "></i><span>&nbsp;&nbsp;试卷信息管理 </span></a>
+								</li>
+								<li><a class="ajax-link" href="satifisies.html"><i
+										class="glyphicon glyphicon-align-justify"></i><span>&nbsp;&nbsp;满意度试题管理</span></a></li>
+
+								<li class="accordion">
+									<a href="#"><i class="glyphicon glyphicon-folder-open"></i><span>&nbsp;&nbsp;教员选题</span></a>
+									<ul class="nav nav-pills nav-stacked">
+										<li><a href="selectGroup.html">自定义选题</a></li>
+										<li><a href="showRadnomQ.html">随机选题</a></li>
+									</ul>
+								</li>
+
+
+								<li><a class="ajax-link" href="updateAdmins.html"><i class="glyphicon glyphicon-th">
+								</i><span> 密码修改</span></a></li>
+								<li><a href="Managerlogin.html"><i class="glyphicon glyphicon-share "></i><span> 退出</span></a></li>
+
+							</ul>
+
+						</div>
+					</div>
+				</div>
+				<!--/span-->
+				<!-- left menu ends -->
+
+				<div id="content" class="col-lg-9 col-sm-9">
+					<!-- content starts -->
+					<div>
+						<ul class="breadcrumb">
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="managersSys.html">主菜单</a>
+							</li>
+								<li>
+								<a href="updateTest.html">试题信息管理</a>
+							</li>
+							<li>
+								<a href="#">试题信息新增</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="form row">
+						<form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="addPapers_form"  >
+							<div class="col-sm-9 col-md-9">
+								<div class="form-group">
+									<i class="fa fa-user fa-lg"></i>
+									<input class="form-control required" type="text" placeholder="输入选择题题目内容" name="test" autofocus="autofocus" id="test"/>
+								</div>
+								<div class="form-group">
+								<i class="fa fa-lock fa-lg"></i>
+								<input class="form-control required" type="text" placeholder="请输入第一个选项"  name="firstopt" id="firstopt"/>
+							</div>
+								<div class="form-group">
+									<i class="fa fa-lock fa-lg"></i>
+									<input class="form-control required" type="text" placeholder="请输入第二个选项"  name="secondopt" id="secondopt"/>
+								</div>
+								<div class="form-group">
+									<i class="fa fa-lock fa-lg"></i>
+									<input class="form-control required" type="text" placeholder="请输入第三个选项"  name="thirdopt" id="thirdopt"/>
+								</div>
+								<div class="form-group">
+									<i class="fa fa-lock fa-lg"></i>
+									<input class="form-control required" type="text" placeholder="请输入第四个选项"  name="fourthopt" id="fourthopt"/>
+								</div>
+
+								<div class="form-group" style="color: black; font-size: 15px">
+									<i class="fa fa-envelope fa-lg"></i>
+									<select  id="whichright"  name="whichright" style="background-color: #d9edf7">
+										<option value="1">第一题选项正确</option>
+										<option value="2">第二题选项正确</option>
+										<option value="3">第三题选项正确</option>
+										<option value="4">第四题选项正确</option>
+
+									</select>
+								</div>
+
+
+								<div class="form-group">
+									<i class="fa fa-check fa-lg"></i>
+									<input class="form-control required" type="text" placeholder="试题出处" name="testfrom" id="testfrom"/>
+								</div>
+								<div class="form-group" style="color: black; font-size: 15px">
+									<i class="fa fa-envelope fa-lg"></i>
+									<label for="1">学生试题</label>
+									<input type="radio" name="testtype" value="1" id="1"/> &nbsp;
+									<label for="2">教员试题</label>
+									<input type="radio" name="testtype" value="2" id="2"/> &nbsp;
+									<label for="3">班主任试题</label>
+									<input type="radio" name="testtype" value="3" id="3"/>
+								</div>
+								<div class="form-group">
+									<input type="submit" class="btn btn-success pull-right" value="提交 "/>
+
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				</div><!--/.fluid-container-->
+			</div>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script src="js/jquery.cookie.js"></script>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.history.js"></script>
+		<!-- application script for Charisma demo -->
+		<script src="js/charisma.js"></script>
+
+			<script type="text/javascript" src="js/bootstrap.js"></script>
+	</body>
+
+</html>

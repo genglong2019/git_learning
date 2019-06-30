@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.css" />
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/MyClock.js"></script>
+	  <script type="text/javascript" src="js/userName.js"></script>
+    <!-- Bootstrap -->
+ 		<style type="text/css">
+				.footer-box{border-top:1px #d7d7d7 solid;margin-top:45px;padding-top:20px;}
+.footer{text-align:center;}
+.footer,.footer a{color:#8c8c8c;font-size:12px;}
+.footer a:hover{color:#ff2832;text-decoration:underline;}
+.footer .foot-link{margin-bottom:20px;}
+.footer .foot-link span{margin:0 14px;}
+
+*{
+ margin:0;
+ padding:0;
+}
+.clock{
+ width:200px;
+ height:200px;
+ margin:10px auto;
+}
+header{
+ width:auto;
+ height:30px;
+ background-color:#000;
+ color:#FFF;
+ text-align:center;
+ line-height:30px;
+}
+
+		
+	</style>
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+		<div class="container">
+	<div class="row clearfix" style="margin-top: 15px;">
+		<div class="col-md-12 column">
+		
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">在线考试中心</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							 <a href="#">成绩汇总</a>
+						</li>
+					
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">历史成绩<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="#">java大数据</a>
+								</li>
+								<li>
+									 <a href="#">前端</a>
+								</li>
+								<li>
+									 <a href="#">数据库</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<div id="imgs"></div>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><div id="username"></div><strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+
+								<li>
+									<a href="#">我的社区</a>
+								</li>
+								<li>
+									<a href="#">我的积分</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="selfupdateinfor.html">完善信息</a>
+								</li>
+
+								<li class="divider">
+								</li>
+								<li>
+									<a href="selfupdatepwd.html">密码修改</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="exite.html">退出</a>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+				</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					 <a href="main.html">首页</a>
+				</li>
+				<li>
+					 <a href="examlCenter.html">在线考试中心</a>
+				</li>
+				<li class="active">
+					自我测试
+				</li>
+			</ul>
+		</div>
+	</div>
+		
+	
+		
+	<div class="row clearfix" style="margin-top: 30px;">
+		<div class="col-md-6 column">
+			<div  style="font-size: 25px; text-align: center;margin-bottom: 20px">
+					各大公司笔试题测试
+			</div>
+		
+			<div >
+		
+			<ol>
+				<li style="margin-bottom: 15px;font-size: 20px">
+					<a href="#">华为笔试题测试</a>
+				</li>
+				<li style="margin-bottom: 15px;font-size: 20px">
+					<a href="#">中兴笔试题测试</a>
+				</li>
+
+				<li style="margin-bottom: 15px;font-size: 20px">
+					<a href="#">阿里巴巴笔试题测试</a>
+				</li>
+
+				<li style="margin-bottom: 15px;font-size: 20px">
+					<a href="#">京东笔试题测试</a>
+				</li>
+				<li style="margin-bottom: 15px;font-size: 20px">
+					<a href="#">百度笔试题测试</a>
+				</li>
+
+
+		
+		
+			</ol>
+				</div>
+				<div >
+		
+			<ul class="pagination">
+				<li>
+					 <a href="#">Prev</a>
+				</li>
+				<li>
+					 <a href="#">1</a>
+				</li>
+				<li>
+					 <a href="#">2</a>
+				</li>
+				<li>
+					 <a href="#">3</a>
+				</li>
+				<li>
+					 <a href="#">4</a>
+				</li>
+				<li>
+					 <a href="#">5</a>
+				</li>
+				<li>
+					 <a href="#">Next</a>
+				</li>
+			</ul>
+		
+			</div>
+		</div>
+		<div class="col-md-6 column"  style=" text-align: center; border:solid #1B6D85 1px ;">
+				<div id="" style="font-size: 25px; text-align: center; font-weight: bolder;" >
+					每月测试考核
+				</div>
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+					<ul style="list-style-type:none;">
+						<li style="margin-top:20px;font-size:20px ;">
+							五月份考核
+						</li>
+						<li style="margin-top:20px ;">
+							考核内容：JAVA WEB相关知识点
+						</li>
+						<li style="margin-top:20px ;">
+							<div id="gidm"></div>
+
+						</li>
+						<li style="margin-top:20px ;">
+							<div id="chinamem"></div>
+
+						</li>
+						<li style="margin-top:20px ;">
+							开考时间：5月20日   20：00点整
+						</li>
+							<li style="margin-top:20px ;">
+							考试时间：1个小时
+						</li>
+						<li style="margin-top:20px ;font-size: 15px; ">
+							<div  style="color: red;">
+									<a href="examing.html">参加考试</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6 column">
+					<section>
+				<div class="clock">
+ 				<canvas id="canvas" width="200" height="200"></canvas>
+				</div>
+				</section>
+				<div >
+					<div class="time" style="font-size:20px ;">
+<SCRIPT language=JavaScript> 
+<!-- 
+
+tmpDate = new Date(); 
+date = tmpDate.getDate(); 
+month= tmpDate.getMonth() + 1 ; 
+year= tmpDate.getYear(); 
+/*document.write(year); 
+document.write("年");*/ 
+document.write(month); 
+document.write("月"); 
+document.write(date); 
+document.write("日 "); 
+
+myArray=new Array(6); 
+myArray[0]="星期日    " 
+myArray[1]="星期一    " 
+myArray[2]="星期二    " 
+myArray[3]="星期三    " 
+myArray[4]="星期四    " 
+myArray[5]="星期五    " 
+myArray[6]="星期六    " 
+weekday=tmpDate.getDay(); 
+if (weekday==0 | weekday==6) 
+{ 
+document.write(myArray[weekday]) 
+} 
+else 
+{ 
+document.write(myArray[weekday]) 
+} 
+// --> 
+</SCRIPT>
+
+</div>
+
+
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<footer class="footer-box">
+  				<div class="footer wrap">
+    			<div class="foot-link"> <a href="">公司简介</a> <span>|</span> <a href="">Investor Relations</a> <span>|</span> <a href="">诚征英才</a> <span>|</span> <a href="">网站联盟</a> <span>|</span> <a href="">广告服务</a> <span>|</span> <a href="">兆隆招商</a> <span>|</span> <a href="">机构销售</a> <span>|</span> <a href="">手机兆隆</a> <span>|</span> <a href="">官方 Blog</a> <span>|</span> <a href="">热词搜索</a> </div>
+    			<p class="copy"> Copyright (C) 兆隆网 2004-2014, All Rights Reserved <a href=""><img src="img/validate.gif"/></a> 京ICP证041189号 出版物经营许可证 新出发京批字第直0673号 </p>
+  				</div>
+			</footer>
+		</div>
+	</div>
+</div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+   <script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+   <script type="text/javascript" src="js/bootstrap.js" ></script>
+  </body>
+</html>

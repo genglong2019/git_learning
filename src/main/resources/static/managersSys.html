@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+      <link rel="stylesheet" href="css/bootstrap.css" />
+      <link rel="stylesheet" href="css/bootstrap-theme.css" />
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/charisma-app.css" />
+      <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+
+
+</head>  
+<body>  
+   <!-- topbar starts -->
+    <div class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-inner">
+            <button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">兆隆教育</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div  class="col-md-2 column">
+             <img src="img/logo.png" width="100px">
+            </div>
+       
+
+            <!-- user dropdown starts -->
+                      <div  class="col-md-10 column">
+                 <div class="btn-group pull-right">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-user"></i><span id="names"></span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="updateAdmins.html">修改密码</a></li>
+                    <li class="divider"></li>
+                    <li><a href="Managerlogin.html">退出</a></li>
+                </ul>
+            </div>
+                 </div>
+
+
+   
+        </div>
+    </div>
+    <!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2"   >
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">菜单栏</li>
+                        <li><a class="ajax-link" href="managersSys.html"><i class="glyphicon glyphicon-home"></i><span>&nbsp;&nbsp;首页</span></a>
+                        </li>
+
+                        <li><a class="ajax-link" href="StudentsInfo.html"><i class="glyphicon glyphicon-eye-open"></i><span> &nbsp;&nbsp;用户信息查询</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="updateStudent.html"><i class="glyphicon glyphicon-list-alt"></i><span> &nbsp;&nbsp;用户信息管理</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="papgersInfo.html"><i class="glyphicon glyphicon-search"></i><span>&nbsp;&nbsp;试卷信息查询</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="updateTest.html"><i class="glyphicon glyphicon-edit "></i><span>&nbsp;&nbsp;试卷信息管理 </span></a>
+                        </li>
+                        <li><a class="ajax-link" href="satifisies.html"><i
+                                class="glyphicon glyphicon-align-justify"></i><span>&nbsp;&nbsp;满意度试题管理</span></a></li>
+
+                        <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-folder-open"></i><span>&nbsp;&nbsp;教员选题</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="selectGroup.html">自定义选题</a></li>
+                                <li><a href="showRadnomQ.html">随机选题</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a class="ajax-link" href="updateAdmins.html"><i class="glyphicon glyphicon-th">
+                               </i><span> 密码修改</span></a></li>
+                        <li><a href="Managerlogin.html"><i class="glyphicon glyphicon-share "></i><span> 退出</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+
+
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+     <ul class="breadcrumb">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="managersSys.html">主菜单</a>
+        </li>
+        </ul>
+
+        </div>
+<div class=" row">
+    <div class="col-md-3 col-sm-3 col-xs-6" >
+        <a data-toggle="tooltip" title="6 new members." class="well top-block" href="StudentsInfo.html">
+
+					<img src="img/q-user1.jpg" width="200px" height="200px" />
+            <div style="font-size: 25px;padding-top: 20px">用户信息查询</div>
+            <span class="notification">1</span>
+        </a>
+    </div>
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+    <a data-toggle="tooltip" title="4 new pro members." class="well top-block" href="updateStudent.html">
+        <img src="img/u-user.jpg" width="200px" height="200px" />
+        <div style="font-size: 25px;padding-top: 20px">用户信息管理</div>
+
+        <span class="notification green">2</span>
+    </a>
+</div>
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="$34 new sales." class="well top-block" href="papgersInfo.html   ">
+            <img src="img/q-papge.png" width="200px" height="200px" />
+            <div style="font-size: 25px;padding-top: 20px">试卷信息查询</div>
+            <span class="notification yellow">3</span>
+        </a>
+    </div>
+
+    <div class="col-md-3 col-sm-3 col-xs-6">
+        <a data-toggle="tooltip" title="12 new messages." class="well top-block" href="updateTest.html">
+            <img src="img/u-papger.png" width="200px" height="200px" />
+            <div style="font-size: 25px;padding-top: 20px">试题信息管理</div>
+            <span class="notification red">4</span>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-header well">
+                <h2><i class="glyphicon glyphicon-info-sign"></i> 考核系统介绍</h2>
+
+     
+            </div>
+            <div class="box-content row">
+                <div class="col-lg-7 col-md-12">
+                    <h2>兆隆考核系统 <br>
+                        <small>学生, 教师， 管理员, 考核系统.</small>
+                    </h2>
+                    <div style="color: #122B40;font-size: 15px;" >
+                    	
+                
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 针对学生和教师之间的满意度进行调查，具体的调查方式主要通过学生投票及投票结果分析考核当前教师或班主任的情况。同时，教师通过不定期学习进度考查，考核学生的学习状况，并对考查结果进行分析，获取学生的状态。
+													主要针对的角色有学生，教师，班主任，系主任，教导主任和系统管理员。</p>
+
+											    </div>
+                  
+                </div>
+            
+                <!-- Ads end -->
+
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+
+
+</div><!--/.fluid-container-->
+</div>
+   <script type="text/javascript" src="js/bootstrap.js"></script>
+   <script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+   <script type="text/javascript" src="js/bootstrap.js" ></script>
+   <script src="js/jquery.cookie.js"></script>
+   <script type="text/javascript" src="js/adminName.js"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.history.js"></script>
+   <!-- application script for Charisma demo -->
+   <script src="js/charisma.js"></script>
+</body>
+</html>

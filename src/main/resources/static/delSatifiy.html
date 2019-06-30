@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<script type="text/javascript" >
+			
+			$(document).ready(function(){
+	function getUrlParam(name){
+		//构造一个含有目标参数的正则表达式对象
+		var reg=new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		//匹配目标参数
+		var r=window.location.search.substr(1).match(reg);
+		//返回参数值
+		if(r!=null) return unescape(r[2]);return null;
+	}
+  	var userid=getUrlParam('userid');
+ 
+  		
+		$.ajax({
+			type:"get",
+			url:"http://localhost:8082/exams/"+userid+"/delSatifiyByManager",
+			async:true,
+			success:function(){
+				window.location.href="satifisies.html";
+			}
+		});
+  
+  
+})
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+

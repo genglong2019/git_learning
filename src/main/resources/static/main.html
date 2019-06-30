@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>学生首页</title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.css" />
+	<style type="text/css">
+		.footer-box{border-top:1px #d7d7d7 solid;margin-top:45px;padding-top:20px;}
+.footer{text-align:center;}
+.footer,.footer a{color:#8c8c8c;font-size:12px;}
+.footer a:hover{color:#ff2832;text-decoration:underline;}
+.footer .foot-link{margin-bottom:20px;}
+.footer .foot-link span{margin:0 14px;}
+#mid{
+    background: url(img/s11.jpg);
+    animation-name:myfirst;
+    animation-duration:12s;
+    /*变换时间*/
+    animation-delay:2s;
+    /*动画开始时间*/
+    animation-iteration-count:infinite;
+    /*下一周期循环播放*/
+    animation-play-state:running;
+    /*动画开始运行*/
+}
+@keyframes myfirst
+{
+    0%   {background:url(img/s11.jpg) no-repeat;}
+    34%  {background:url(img/s22.jpg);}
+    67%  {background:url(img/s33.jpg);}
+    100% {background:url(img/s2s.jpg);}
+}
+		
+		
+	</style>
+    <!-- Bootstrap -->
+
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+   <div class="container">
+	<div class="row clearfix" >
+		<div class="col-md-4 column">
+			<img  src="img/logonew.png" width="100px" height="100px" /> |	<img  src="img/logo2.png" width="200px" height="50px" />
+		</div>
+		<div class="col-md-4 column" style="margin-top: 20px;" >
+			<nav class="navbar navbar-default" role="navigation">
+			
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+					
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" />
+						</div> <button type="submit" class="btn btn-default">搜索</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+
+
+		<div class="col-md-4 column" style="margin-top: 20px;" >
+
+				
+				
+				<div class="collapse navbar-collapse" >
+					<ul class="nav navbar-nav">
+						<li class="active">
+							 <a href="#"><img  src="img/tel.png" width="30px" height="30px" />&nbsp; APP下载</a>
+						</li>
+						<li  >
+							<div id="imgs"></div>
+
+						</li>
+						<li class="dropdown">
+
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><div id="username"></div><strong class="caret"></strong></a>
+
+							<ul class="dropdown-menu">
+
+								<li>
+									 <a href="#">我的社区</a>
+								</li>
+								<li>
+									 <a href="#">我的积分</a>
+								</li>
+									<li class="divider">
+								</li>
+								<li>
+									 <a href="selfupdateinfor.html">完善信息</a>
+								</li>
+
+								<li class="divider">
+								</li>
+								<li>
+									<a href="selfupdatepwd.html">密码修改</a>
+								</li>
+									<li class="divider">
+								</li>
+								<li>
+									 <a href="exite.html">退出</a>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+		
+		</div>
+		
+	</div>
+	<div class="row clearfix" >
+		<div class="col-md-2 column" style="background-color: darkgreen;">
+			<h3 style="font-family: '微软雅黑';color: white;text-align: center; ">
+				试题种类
+			</h3>
+		</div>
+		<div class="col-md-6 column">
+	
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="examlCenter.html">在线考试中心</a>
+				</div>
+
+				<div class="collapse navbar-collapse" >
+					<ul class="nav navbar-nav">
+						<li class="active">
+							 <a href="#">课程安排</a>
+						</li>
+
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">历年面试题<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="#">java大数据</a>
+								</li>
+								<li>
+									 <a href="#">前端</a>
+								</li>
+								<li>
+									 <a href="#">数据库</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+
+
+		</div>
+		<div class="col-md-4 column">
+			<img src="img/ss.gif" />
+		</div>
+	</div>
+	<div class="row clearfix" id="mid" >
+		<div class="col-md-2 column" style="background: darkslategrey;">
+			<ul style="color: white; font-size:15px ;font-family: '微软雅黑';">
+				
+				<a href="#" ><li style="margin-top:15px ;" >大数据分析</li></a>	
+				
+				<a href="#"><li style="margin-top:15px ;">
+		
+					java web开发
+				</li></a>
+				<a href="#"><li style="margin-top:15px ;">
+			
+				C语言编程
+				</li></a>
+				<a href="#"><li style="margin-top:15px ;">
+		
+					Spring
+				</li></a>
+			<a href="#"><li style="margin-top:15px ;">
+	
+				Linux
+				</li></a>
+				<a href="#"><li style="margin-top:15px ;">
+
+					数据库
+				</li></a>
+					<a href="#">	<li style="margin-top:15px ;">
+
+					Python
+				</li></a>
+			
+		
+			</ul>
+		</div>
+		<div class="col-md-7 column">
+		<div >
+			</div>
+		</div>
+		<div class="col-md-3 column" style="background-color: white; height:250px; border: solid black 1px; width: 200px; margin-left: 25px;">
+			<div  style="align-content: center;">
+					<h3 >
+				公告
+			</h3>
+			</div>
+		
+			<p>
+			2018年华为   百度  阿里巴巴最新面试和笔试题，将于5月1日入库；同时腾杨子老师会在直播间对其进行深度讲解,敬请大家关注!
+			</p>
+			<p>
+				 <a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+	</div>
+	<div class="row clearfix" style="margin-top: 20px;">
+		
+	
+	<div class="col-md-2 column" >
+		<div id="">
+						<a href="#"><img  src="img/sss1.gif" /> </a>
+		</div>
+				<div  style="font-size:20px ; ">
+
+					<span style="font-size:20px ;background-color: #449D44;">&nbsp;</span><strong>最新课程</strong>
+				</div>
+			<ul >
+				<a href="#"><li>
+					华为软件测试白皮书
+				</li></a>
+				<a href="#"><li>
+				网页端UI设计系列
+				</li></a>
+				<a href="#"><li>
+			Python基础教程
+				</li></a>
+					<a href="#"><li>
+			Oracle基础
+				</li></a>
+		</ul>
+
+		</div>
+		<div class="col-md-4 column" style="margin-left:30px;" >
+			<div >
+						<a href="#"><img  src="img/end-1.jpg" /></a>
+					<span style="font-size:20px ;background-color: #449D44;">&nbsp;</span>系列课程
+					
+			</div>
+			<div style="margin-top:15px ;">
+				<div >
+			<a href="#"><img  src="img/sss6.jpg"  width="450px"/></a>
+				</div>
+				
+				<!--<img  src="img/sss3.jpg" width="170px" height="110px"/>	<img  src="img/sss4.jpg" width="170px" height="110px"/>-->
+			</div>
+			
+		</div>
+		<div class="col-md-2 column" style="margin-left:65px;">
+			<div >
+					<a href="#"><img  src="img/sss2.png"/></a>
+					<span style="font-size:20px ;background-color: #449D44;">&nbsp;</span>系列专题
+			</div>
+						<div  >
+					<a href="#"><img  src="img/sss5.jpg"  /></a>
+			</div>
+			
+		</div>
+		<div class="col-md-2 column" style="margin-left:35px; border: solid blue 1px;" >
+			<ul > 
+				<div style="font-size:20px ; ">
+					<span style="font-size:20px ;background-color: #449D44;">&nbsp;</span><strong>各大公司试题</strong>
+				</div>
+				<a href="#"><li>
+					华为
+				</li></a>
+				<a href="#"><li>
+					阿里巴巴
+				</li></a>
+				<a href="#"><li>
+				百度
+				</li></a>
+				<a href="#">	<li>
+				京东
+				</li></a>
+
+				<a href="#"><li>
+					华为
+				</li></a>
+				<a href="#"><li>
+					阿里巴巴
+				</li></a>
+				<a href="#"><li>
+				百度
+				</li></a>
+				<a href="#">	<li>
+				京东
+				</li></a>
+				<a href="#"><li>
+					阿里巴巴
+				</li></a>
+				<a href="#"><li>
+				百度
+				</li></a>
+				<a href="#">	<li>
+				京东
+				</li></a>
+	
+	
+			</ul>
+		</div>
+	
+	</div>
+	<div class="row clearfix">
+	<div class="col-md-12 column">
+	<footer class="footer-box">
+  <div class="footer wrap">
+    <div class="foot-link"> <a href="">公司简介</a> <span>|</span> <a href="">Investor Relations</a> <span>|</span> <a href="">诚征英才</a> <span>|</span> <a href="">网站联盟</a> <span>|</span> <a href="">广告服务</a> <span>|</span> <a href="">兆隆招商</a> <span>|</span> <a href="">机构销售</a> <span>|</span> <a href="">手机兆隆</a> <span>|</span> <a href="">官方 Blog</a> <span>|</span> <a href="">热词搜索</a> </div>
+    <p class="copy"> Copyright (C) 兆隆网 2004-2014, All Rights Reserved <a href=""><img src="img/validate.gif"/></a> 京ICP证041189号 出版物经营许可证 新出发京批字第直0673号 </p>
+  </div>
+</footer>
+</div>
+	</div>
+</div>
+	
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+   <script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+   <script type="text/javascript" src="js/userName.js"></script>
+   <script type="text/javascript" src="js/bootstrap.js" ></script>
+  </body>
+</html>

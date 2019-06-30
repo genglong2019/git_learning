@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>Bootstrap 101 Template</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				background: #E6EAEB;
+				font-family: Arial, '微软雅黑', '宋体';
+				font-size: 25px;
+			}
+			
+
+		</style>
+
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<!--<script type="text/javascript" src="js/createExams.js"></script>-->
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column" style="text-align: center;">
+					<h3>
+			教员满意度填写
+			</h3>
+					<hr />
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-3 column">
+				<div> <img src="img/s-te.jpg" width="300px"height="300px"/></div>
+				</div>
+				<div class="col-md-9 column" style="padding-left: 200px;">
+					<form name="quiz1" style="font-size: 25px;" id="exam_form">
+						<div id="examing"></div>
+					
+
+
+						<hr>
+                        <input type="button" name="submit" value="提交" onClick=scorequiz(this.form) class="pt9">
+
+                    </form>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+        <script>
+
+
+            var one=0;
+            var two=0;
+            var three=0;
+            var four=0;
+            var five=0;
+            var six=0;
+            var seven=0;
+            var eight=0;
+            var nine=0;
+            var ten=0;
+            var tescores=0;
+            function scorequiz(form) {
+                one= parseInt(form.Q1.value) ;
+                two= parseInt(form.Q2.value)
+                 three= parseInt(form.Q3.value)
+                 four= parseInt(form.Q4.value)
+                 five= parseInt(form.Q5.value);
+                 six=parseInt(form.Q6.value)
+				seven= parseInt(form.Q7.value)
+                 eight=parseInt(form.Q8.value)
+                 nine= parseInt(form.Q9.value)
+				ten=parseInt(form.Q10.value)
+                tescores=one+two+three+four+five+six+seven+eight+nine+ten;
+				result();
+            }
+            var f="";
+            var state ="";
+            function times(f){
+                var obj=document.getElementsByName(f);
+                for(var i=0;i<obj.length; i++){
+                    if(obj[i].checked){
+                        state=obj[i].value;
+                    }
+                }
+                return state;
+            }
+			function result(){
+
+                var ustate="2";
+                var id=window.localStorage.getItem('id');
+                var gid=window.localStorage.getItem('gid');
+                var sfresult = {
+					"sfone":one,
+					"sftwo":two,
+					"sfthree":three,
+					"sffour":four,
+					"sffive":five,
+					"sfsix":six,
+					"sfseven":seven,
+					"sfeight":eight,
+					"sfnine":nine,
+					"sften":ten,
+					"usestate":ustate,
+					"tescores":tescores,
+					"id":id,
+					"gid":gid,
+				};
+                $.ajax({
+                    type: "post",
+					data:sfresult,
+                    url: "http://localhost:8082/exams/sfresult",
+                    async: true
+                });
+                window.location.href="s-headte.html";
+			}
+
+
+
+            $(document).ready(function() {
+                $.ajax({
+                    type: "get",
+                    url: "http://localhost:8082/exams/satifisy",
+                    async: true,
+                    success: function(data) {
+                        if(data != "{}") {
+                            var js = JSON.parse(data);
+                            var n=0;
+                            for(var i = 0; i < js.books.length; i++) {
+
+                                if(js.books[i].sftype==2){
+                                    n++;
+                                var m = "<div>" + n + ". " + js.books[i].sfhead + "<br /><br />A:非常满意<br /><br />B：满意<br /><br />C;一般<br /><br />D:不满意<br /><br />" +
+                                    "<ol>A&nbsp;&nbsp;<input type='radio' name='Q" + n + "' value='10'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;" +
+                                    "<input type='radio' name='Q" + n + "' value='8'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;" +
+                                    "<input type='radio' name='Q" + n + "' value='3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;" +
+                                    "<input type='radio' name='Q" + n + "' value='0'></ol></div>";
+                                $("#examing").before(m);
+
+                                }
+                            }
+                        }
+                    }
+                });
+
+            })
+
+        </script>
+	</body>
+</html>

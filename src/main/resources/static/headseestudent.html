@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>学生成绩分析</title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.css" />
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/headseestudent.js"></script>
+	<script type="text/javascript" src="js/sfresult.js"></script>
+    <!-- Bootstrap -->
+ 		<style type="text/css">
+				.footer-box{border-top:1px #d7d7d7 solid;margin-top:45px;padding-top:20px;}
+.footer{text-align:center;}
+.footer,.footer a{color:#8c8c8c;font-size:12px;}
+.footer a:hover{color:#ff2832;text-decoration:underline;}
+.footer .foot-link{margin-bottom:20px;}
+.footer .foot-link span{margin:0 14px;}
+
+*{
+ margin:0;
+ padding:0;
+}
+.clock{
+ width:200px;
+ height:200px;
+ margin:10px auto;
+}
+header{
+ width:auto;
+ height:30px;
+ background-color:#000;
+ color:#FFF;
+ text-align:center;
+ line-height:30px;
+}
+
+		
+	</style>
+	  <script type="text/javascript">
+          $(document).ready(function() {
+              $("#onclick").click(function () {
+                  window.open("sfdetails.html", "成绩", "width=1024px,height=700px")
+              })
+          })
+
+
+
+	  </script>
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+		<div class="container">
+	<div class="row clearfix" style="margin-top: 50px">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					 <a href="headTe.html">班主任考试中心</a>
+				</li>
+
+				<li class="active">
+					学生成绩分析
+				</li>
+			</ul>
+		</div>
+	</div>
+		
+	
+		
+	<div class="row clearfix" style="margin-top: 30px;">
+
+		<div class="col-md-6 column">
+			<div  style="text-align: center;font-family: '微软雅黑';font-size: 20px;font-weight: bolder;" >
+				本班学生信息表
+			</div>
+			<div  style="margin-top: 10px;">
+
+
+				<table class="table">
+					<thead>
+					<tr>
+						<th>
+							编号
+						</th>
+						<th>
+							缩略图
+						</th>
+						<th>
+							姓名
+						</th>
+						<th>
+							班级
+						</th>
+						<th>
+							邮箱
+						</th>
+
+						<th>
+							类型
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr id="showexamrecond">
+
+					</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="col-md-6 column" style="text-align: center;">
+			<div class="jumbotron">
+				<div id="sfresult"></div>
+				<p><div class='btn btn-primary btn-large' id='onclick'>查询详情</div></p>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<footer class="footer-box">
+  				<div class="footer wrap">
+    			<div class="foot-link"> <a href="">公司简介</a> <span>|</span> <a href="">Investor Relations</a> <span>|</span> <a href="">诚征英才</a> <span>|</span> <a href="">网站联盟</a> <span>|</span> <a href="">广告服务</a> <span>|</span> <a href="">兆隆招商</a> <span>|</span> <a href="">机构销售</a> <span>|</span> <a href="">手机兆隆</a> <span>|</span> <a href="">官方 Blog</a> <span>|</span> <a href="">热词搜索</a> </div>
+    			<p class="copy"> Copyright (C) 兆隆网 2004-2014, All Rights Reserved <a href=""><img src="img/validate.gif"/></a> 京ICP证041189号 出版物经营许可证 新出发京批字第直0673号 </p>
+  				</div>
+			</footer>
+		</div>
+	</div>
+</div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+   <script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+   <script type="text/javascript" src="js/bootstrap.js" ></script>
+  </body>
+</html>
